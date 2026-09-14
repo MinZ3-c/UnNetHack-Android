@@ -1,5 +1,15 @@
 # Android publication preparation
 
+## 2026-09-14 — Android preview 3
+
+- Enable force_invmenu by default on Android and open the appropriate inventory
+  directly for item selection, including wear and drop. The option remains
+  configurable; other platforms keep their existing behavior.
+- Keep filtered/full inventory selection, quantities and command replay paths;
+  closing an automatic menu cancels instead of reopening it.
+- Verified the actual Android getobj implementation with simulated menu
+  callbacks on an S22 Ultra. VersionCode 6001503; saves match preview 2.
+
 ## 2026-09-14 — Android preview 2
 
 - Generate host data and Android tables with the same MAIL setting, fixing

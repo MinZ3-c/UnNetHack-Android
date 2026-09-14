@@ -56,3 +56,12 @@ The installed working app and device data were not changed in this review.
   Android library and verified xname output for one and 23 coins: "gold piece"
   and "gold pieces". The probe initializes the player monster needed by the
   naming code's blindness check. No app install or saved-game access occurred.
+# Android preview 3 (2026-09-14)
+
+The standalone tests/android/inventory-menu.c probe loads the real Android
+library and supplies a synthetic inventory and window callbacks. On the S22
+Ultra it passes: filtered wear menu with one matching object, full inventory
+expansion, drop with quantity, cancellation/empty selection without looping,
+and letter input when force_invmenu is disabled. It does not exercise the
+Java rendering layer or open a real saved game. Object/monster parity checks
+also pass; the table layout and save format are unchanged from preview 2.

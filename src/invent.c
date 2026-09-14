@@ -1203,6 +1203,12 @@ getobj(const char *let, const char *word)
             ilet = readchar();
         } else
 #endif
+#ifdef ANDROID
+        /* 2026-09-14: mobile item prompts open the inventory immediately. */
+        if (iflags.force_invmenu) {
+            ilet = *buf ? '?' : '*';
+        } else
+#endif
         ilet = yn_function(qbuf, (char *)0, '\0');
         if (ilet == '0') {
             prezero = TRUE;
@@ -1263,6 +1269,11 @@ getobj(const char *let, const char *word)
                                    , FALSE, TRUE
                                    );
             if (!ilet) {
+#ifdef ANDROID
+                if (iflags.force_invmenu) {
+                    return NULL; /* closing an automatic menu cancels the command */
+                }
+#endif
                 continue;
             }
             if (ilet == HANDS_SYM) {

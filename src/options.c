@@ -130,7 +130,11 @@ static struct Bool_Opt
 #else
     {"flush", (boolean *)0, FALSE, SET_IN_FILE},
 #endif
+#ifdef ANDROID
+    {"force_invmenu", &iflags.force_invmenu, TRUE, SET_IN_GAME },
+#else
     {"force_invmenu", &iflags.force_invmenu, FALSE, SET_IN_GAME },
+#endif
     {"fullscreen", &iflags.wc2_fullscreen, FALSE, SET_IN_FILE},
     {"goldX", &flags.goldX, FALSE, SET_IN_FILE },
     {"guicolor", &iflags.wc2_guicolor, TRUE, SET_IN_GAME},

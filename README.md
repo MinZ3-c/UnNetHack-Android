@@ -32,11 +32,15 @@ heart markers and classic `STATUSCOLOR` support.
 
 ## Download
 
-Get the [Android preview APK](https://github.com/MinZ3-c/UnNetHack-Android/releases/tag/android-v6.0.15-dev.2)
+Get the [Android preview APK](https://github.com/MinZ3-c/UnNetHack-Android/releases/tag/android-v6.0.15-dev.3)
 for ARM64 devices running Android 6.0 or newer. Read the release notes for the
 test status, debug-signing details and outstanding licensing questions.
 
 ## Current status
+
+Preview 3 opens inventory selection automatically for item commands such as
+wear and drop. Android enables `force_invmenu` by default; `OPTIONS=!force_invmenu`
+restores letter prompts. Preview 3 uses the same save format as preview 2.
 
 Preview 2 fixes mismatched generated object and monster IDs (including gold
 being named "white gems"). Start with a new character name: saves from the
