@@ -1,3 +1,4 @@
+/* Android port maintainers: modified for Android integration; publication notice added 2026-09-13. Earlier individual edit dates were not preserved in the uploaded snapshot. */
 /* Copyright (c) Stichting Mathematisch Centrum, Amsterdam, 1985. */
 /* NetHack may be freely redistributed.  See license for details. */
 
@@ -97,7 +98,7 @@ percentage_color_of(int value, int max, const struct percent_color_option *color
 void
 start_color_option(struct color_option color_option)
 {
-#ifdef TTY_GRAPHICS
+#if defined(TTY_GRAPHICS) || defined(ANDROID)
     int i;
     if (color_option.color != NO_COLOR) {
         term_start_color(color_option.color);
@@ -113,7 +114,7 @@ start_color_option(struct color_option color_option)
 void
 end_color_option(struct color_option color_option)
 {
-#ifdef TTY_GRAPHICS
+#if defined(TTY_GRAPHICS) || defined(ANDROID)
     int i;
     if (color_option.color != NO_COLOR) {
         term_end_color();
@@ -1063,6 +1064,10 @@ bot(void)
     bot1();
     bot2();
     bot3();
+#ifdef ANDROID
+    extern void and_bot_updated(void);
+    and_bot_updated();
+#endif
     flags.botl = flags.botlx = 0;
 }
 

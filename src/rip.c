@@ -1,7 +1,11 @@
+/* Android port maintainers: modified for Android integration; publication notice added 2026-09-13. Earlier individual edit dates were not preserved in the uploaded snapshot. */
 /* Copyright (c) Stichting Mathematisch Centrum, Amsterdam, 1985. */
 /* NetHack may be freely redistributed.  See license for details. */
 
 #include "hack.h"
+#ifdef ANDROID
+# define TEXT_TOMBSTONE
+#endif
 
 extern const char * const killed_by_prefix[];   /* from topten.c */
 

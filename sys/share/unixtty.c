@@ -1,3 +1,4 @@
+/* Android port maintainers: modified for Android integration; publication notice added 2026-09-13. Earlier individual edit dates were not preserved in the uploaded snapshot. */
 /*	SCCS Id: @(#)unixtty.c	3.4	1990/22/02 */
 /* Copyright (c) Stichting Mathematisch Centrum, Amsterdam, 1985. */
 /* NetHack may be freely redistributed.  See license for details. */
@@ -35,7 +36,7 @@
 #   define termstruct	termio
 #  endif
 # endif /* POSIX_TYPES */
-# ifdef LINUX
+# if defined(LINUX) && !defined(ANDROID)
 #  include <termios.h>
 #  undef delay_output	/* curses redefines this */
 #  include <curses.h>
@@ -438,7 +439,7 @@ init_linux_cons(void)
 #endif	/* __linux__ */
 
 
-#ifndef __begui__	/* the Be GUI will define its own error proc */
+#if !defined(__begui__) && !defined(ANDROID)
 /* fatal error */
 /*VARARGS1*/
 void

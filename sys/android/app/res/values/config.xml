@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="namespace">org.unnethack.android</string>
+	<string name="oldActivityName">UnNetHack</string>
+	<string name="nativeDataDir">unnethackdir</string>
+	<string name="libraryName">unnethack</string>
+	<string name="defaultsFile">defaults.unh</string>
+	<string name="defaultCmdPanel">menu ... # v 20s . : ; , d e r z Z q t f w x i E Q P R W T o ^d ^p a A ^t D F p ^x ^o ?</string>
+	<bool name="useCP437Decoder">false</bool>
+	<bool name="hearseAvailable">false</bool>
+	<string name="hearseClientName">Gurr Android UnNethack 1.0.1</string>
+	<string name="hearseRoles">Arc|Bar|Cav|Con|Hea|Kni|Mon|Pri|Rog|Ran|Sam|Tou|Val|Wiz</string>
+	<string name="hearseNethackVersion">56</string>
+	<bool name="hearseLittleEndian">true</bool>
+	<bool name="oldStatusMode">true</bool>
+</resources>

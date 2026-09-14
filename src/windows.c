@@ -1,3 +1,4 @@
+/* Android port maintainers: modified for Android integration; publication notice added 2026-09-13. Earlier individual edit dates were not preserved in the uploaded snapshot. */
 /*  SCCS Id: @(#)windows.c  3.4 1996/05/19  */
 /* Copyright (c) D. Cohrs, 1993. */
 /* NetHack may be freely redistributed.  See license for details. */
@@ -51,6 +52,10 @@ extern struct window_procs dummy_procs;
 extern struct window_procs lisp_procs;
 #endif
 
+#ifdef ANDROID
+extern struct window_procs and_procs;
+#endif
+
 static void def_raw_print(const char *s);
 
 NEARDATA struct window_procs windowprocs;
@@ -99,6 +104,9 @@ struct win_choices {
 #endif
 #ifdef LISP_GRAPHICS
     { &lisp_procs, win_lisp_init },
+#endif
+#ifdef ANDROID
+    { &and_procs, 0 },
 #endif
     { 0, 0 }        /* must be last */
 };

@@ -1,0 +1,45 @@
+plugins {
+  id 'com.android.library'
+}
+
+group = 'com.tbd.forkfront'
+version = '2.0'
+int versionId = 2000;
+
+android {
+
+  namespace = 'com.tbd.forkfront'
+  compileSdk {
+      version = release(36)
+  }
+  buildToolsVersion '36.0.0'
+
+  defaultConfig {
+    minSdkVersion 7
+    targetSdkVersion 36
+    versionName version
+    versionCode versionId
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+
+  lint {
+    // TODO: this is needed because the indentation in the project is inconcsistent, but I should probably just normalize the indentation in the first place.
+    disable = ['SuspiciousIndentation', 'ExpiredTargetSdkVersion']
+  }
+
+  sourceSets {
+    main {
+      manifest.srcFile('AndroidManifest.xml')
+      java.srcDirs(['src'])
+      res.srcDirs(['res'])
+    }
+  }
+}
+
+dependencies {
+  implementation 'cz.msebera.android:httpclient:4.4.1.2'
+}

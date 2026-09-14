@@ -1,3 +1,4 @@
+/* Android port maintainers: modified for Android integration; publication notice added 2026-09-13. Earlier individual edit dates were not preserved in the uploaded snapshot. */
 /* Copyright (c) Stichting Mathematisch Centrum, Amsterdam, 1985. */
 /* NetHack may be freely redistributed.  See license for details. */
 
@@ -326,7 +327,7 @@ typedef genericptr genericptr_t;    /* (void *) or (char *) */
 #define NORETURN __attribute__((noreturn))
 #endif
 #endif
-#if (!defined(__linux__) && !defined(MACOS)) || defined(GCC_URWARN)
+#if (!defined(__linux__) && !defined(MACOS) && !defined(__CYGWIN__)) || defined(GCC_URWARN)
 /* disable gcc's __attribute__((__warn_unused_result__)) since explicitly
    discarding the result by casting to (void) is not accepted as a 'use' */
 #define __warn_unused_result__ __attribute__

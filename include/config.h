@@ -1,3 +1,4 @@
+/* Android port maintainers: modified for Android integration; publication notice added 2026-09-13. Earlier individual edit dates were not preserved in the uploaded snapshot. */
 /*  SCCS Id: @(#)config.h   3.4 2003/12/06  */
 /* Copyright (c) Stichting Mathematisch Centrum, Amsterdam, 1985. */
 /* NetHack may be freely redistributed.  See license for details. */
@@ -126,6 +127,14 @@
 # endif
 #endif
 
+#ifdef ANDROID
+# undef TTY_GRAPHICS
+# undef CURSES_GRAPHICS
+# undef DUMMY_GRAPHICS
+# undef DEFAULT_WINDOW_SYS
+# define DEFAULT_WINDOW_SYS "and"
+#endif
+
 #ifndef DEFAULT_WINDOW_SYS
 # define DEFAULT_WINDOW_SYS "tty"
 #endif
@@ -190,7 +199,7 @@
  */
 
 #ifndef AUTOCONF
-#ifdef UNIX
+#if defined(UNIX) && !defined(ANDROID)
 /* path and file name extension for compression program */
 /* #define COMPRESS "/usr/bin/compress" */  /* Lempel-Ziv compression */
 /* #define COMPRESS_EXTENSION ".Z"  */  /* compress's extension */
@@ -218,7 +227,7 @@
  */
 #define INSURANCE   /* allow crashed game recovery */
 
-#ifndef MAC
+#if !defined(MAC) && !defined(ANDROID)
 # define CHDIR      /* delete if no chdir() available */
 #endif
 
@@ -417,7 +426,7 @@ typedef long glyph_t;
 
 
 #if defined(TTY_GRAPHICS) || defined(MSWIN_GRAPHICS) || \
-    defined(CURSES_GRAPHICS)
+    defined(CURSES_GRAPHICS) || defined(ANDROID)
 # define MENU_COLOR
 /*# define MENU_COLOR_REGEX*/
 /* if MENU_COLOR_REGEX is defined, use regular expressions (regex.h)

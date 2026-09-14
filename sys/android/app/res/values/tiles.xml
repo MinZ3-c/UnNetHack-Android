@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tileNames">
+    	<item>Ascii (no tiles)</item>
+        <item>Unchozo</item>
+        <item>UnDawnHack</item>
+        <item>Geoduck</item>
+    </string-array>
+    <string-array name="tileValues">
+        <item>TTY</item>
+        <item>unchozo_32</item>
+        <item>undawnhack_32</item>
+        <item>ungeoduck_12x20</item>
+    </string-array>
+</resources>

@@ -1,3 +1,4 @@
+/* Android port maintainers: modified for Android integration; publication notice added 2026-09-13. Earlier individual edit dates were not preserved in the uploaded snapshot. */
 /*  SCCS Id: @(#)end.c  3.4 2003/03/10  */
 /* Copyright (c) Stichting Mathematisch Centrum, Amsterdam, 1985. */
 /* NetHack may be freely redistributed.  See license for details. */
@@ -50,7 +51,7 @@ void do_vanquished(int, boolean);
 static void list_genocided(int, boolean, boolean);
 static boolean should_query_disclose_option(int, char *);
 
-#if defined(__BEOS__) || defined(MICRO) || defined(WIN32) || defined(OS2)
+#if defined(__BEOS__) || defined(MICRO) || defined(WIN32) || defined(OS2) || defined(ANDROID)
 extern void nethack_exit(int);
 #else
 #define nethack_exit exit

@@ -1,0 +1,28 @@
+UnNetHack 6 Android — community port, publication-review draft
+
+UnNetHack / NetHack: retain all original copyright and warranty notices.
+The complete NetHack General Public License is in LICENSE and dat/license.
+This is a modified community port, not an official UnNetHack Android release.
+
+Sources and exact revisions: dependencies.json.
+Android bridge references: gurrhack/UnNetHack-Android,
+JodiJodington/NetHack-Android.
+Frontend: JodiJodington/ForkFront-Android, derived from earlier ForkFront work.
+Ranbato is credited for the Hearse implementation in the inherited app credits.
+
+Lua 5.4.8: Copyright (C) 1994-2025 Lua.org, PUC-Rio.
+Exact upstream notice: THIRD_PARTY_LICENSES/Lua-5.4.8.txt.
+
+Apache-licensed source files retain their own headers; full Apache-2.0 text
+is included. This does not assert that all ForkFront files are Apache-licensed.
+cz.msebera.android:httpclient:4.4.1.2 is declared in forkfront/lib/build.gradle;
+its complete binary dependency/NOTICE inventory still needs verification.
+
+GNU FreeMono: the embedded copyright and license/exception metadata are in
+THIRD_PARTY_LICENSES/FreeMono-metadata.txt; GPLv3 text is included. Matching
+font source and provenance must be resolved before redistribution.
+
+Artwork attribution is preserved in sys/android/app/res/values/credits.xml
+and upstream tilesets/README. Asset hashes and provenance matches appear in
+docs/ASSET-PROVENANCE.json. Permission gaps are recorded in
+docs/PUBLICATION-REVIEW.md and block public distribution of this draft.

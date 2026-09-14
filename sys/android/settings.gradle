@@ -1,0 +1,4 @@
+// Modified 2026-09-13: publication paths/configuration.
+rootProject.name = 'UnNetHack-Android'
+include ':app', ':forkfront'
+project(':forkfront').projectDir = file('../../forkfront/lib')

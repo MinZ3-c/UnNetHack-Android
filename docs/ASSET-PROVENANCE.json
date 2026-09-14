@@ -1,0 +1,193 @@
+[
+  {
+    "path": "sys/android/app/res/drawable-nodpi/undawnhack_32.png",
+    "sha256": "1638eadc9e87763bd3db30eacbec09e294a9f542f18446ef0447f57ca89c8a8f",
+    "identical_reference_files": [
+      "gurrhack/UnNetHack-Android@d4fade97:sys/android/res/drawable-nodpi/undawnhack_32.png"
+    ],
+    "license_status": "needs component/asset-specific review; hash equality is not a permission grant"
+  },
+  {
+    "path": "sys/android/app/res/drawable-nodpi/nevanda_32x32.png",
+    "sha256": "145f91c1fea55bde068006b075e0efc0d35594d3225f7dba255e56eee4dcf589",
+    "identical_reference_files": [
+      "JodiJodington/NetHack-Android@4aecc1f2:sys/android/app/res/drawable-nodpi/nevanda_32x32.png"
+    ],
+    "license_status": "needs component/asset-specific review; hash equality is not a permission grant"
+  },
+  {
+    "path": "sys/android/app/res/drawable-nodpi/geoduck_15x25.png",
+    "sha256": "0d2a0b6d95b9cf0c50c322f6fc3f6c1dd99345be667b2380935fb8e188d702c0",
+    "identical_reference_files": [
+      "JodiJodington/NetHack-Android@4aecc1f2:sys/android/app/res/drawable-nodpi/geoduck_15x25.png"
+    ],
+    "license_status": "needs component/asset-specific review; hash equality is not a permission grant"
+  },
+  {
+    "path": "sys/android/app/res/drawable-nodpi/ungeoduck_12x20.png",
+    "sha256": "1e55298ca417136b17c9bc8926341acce2e7296c56d7d05d46a8e3d9ca374a50",
+    "identical_reference_files": [
+      "gurrhack/UnNetHack-Android@d4fade97:sys/android/res/drawable-nodpi/ungeoduck_12x20.png"
+    ],
+    "license_status": "needs component/asset-specific review; hash equality is not a permission grant"
+  },
+  {
+    "path": "sys/android/app/res/drawable-nodpi/unchozo_32.png",
+    "sha256": "0b5b10926a73fa7f9e81c3aef353aabac563c1dc4e3a8d9cb96fa9d971061fa1",
+    "identical_reference_files": [
+      "gurrhack/UnNetHack-Android@d4fade97:tilesets/unchozo32b.png",
+      "gurrhack/UnNetHack-Android@d4fade97:sys/android/res/drawable-nodpi/unchozo_32.png"
+    ],
+    "license_status": "needs component/asset-specific review; hash equality is not a permission grant"
+  },
+  {
+    "path": "sys/android/app/res/drawable-nodpi/overlays.png",
+    "sha256": "05f7791371855ef220663b1aab26f8ccfe4a10979643761767a8c9e025aa978b",
+    "identical_reference_files": [
+      "JodiJodington/NetHack-Android@4aecc1f2:sys/android/app/res/drawable-nodpi/overlays.png",
+      "gurrhack/UnNetHack-Android@d4fade97:sys/android/res/drawable-nodpi/overlays.png"
+    ],
+    "license_status": "needs component/asset-specific review; hash equality is not a permission grant"
+  },
+  {
+    "path": "sys/android/app/res/drawable-nodpi/default_16x16.png",
+    "sha256": "8ee8718ba8783072c47fbafed07729e4993d8added4ea4a9fd1620eed7121490",
+    "identical_reference_files": [
+      "JodiJodington/NetHack-Android@4aecc1f2:sys/android/app/res/drawable-nodpi/default_16x16.png"
+    ],
+    "license_status": "needs component/asset-specific review; hash equality is not a permission grant"
+  },
+  {
+    "path": "sys/android/app/res/drawable/icon.png",
+    "sha256": "933c454876f14eba903324ffb181afcaaec78d51c92a0056074fcf46fa0e7be1",
+    "identical_reference_files": [
+      "JodiJodington/NetHack-Android@4aecc1f2:sys/android/app/res/drawable/icon.png",
+      "gurrhack/UnNetHack-Android@d4fade97:sys/android/res/drawable/icon.png"
+    ],
+    "license_status": "needs component/asset-specific review; hash equality is not a permission grant"
+  },
+  {
+    "path": "sys/android/app/assets/fonts/monobold.ttf",
+    "sha256": "05624e2a2137165be85691574be359972b6331ede989c728d6550491d3a18804",
+    "identical_reference_files": [
+      "JodiJodington/NetHack-Android@4aecc1f2:sys/android/app/assets/fonts/monobold.ttf",
+      "gurrhack/UnNetHack-Android@d4fade97:sys/android/assets/fonts/monobold.ttf"
+    ],
+    "license_status": "needs component/asset-specific review; hash equality is not a permission grant"
+  },
+  {
+    "path": "sys/android/gradle/wrapper/gradle-wrapper.jar",
+    "sha256": "497c8c2a7e5031f6aa847f88104aa80a93532ec32ee17bdb8d1d2f67a194a9c7",
+    "identical_reference_files": [
+      "JodiJodington/NetHack-Android@4aecc1f2:sys/android/gradle/wrapper/gradle-wrapper.jar",
+      "ForkFront@1ce8a040:gradle/wrapper/gradle-wrapper.jar"
+    ],
+    "license_status": "needs component/asset-specific review; hash equality is not a permission grant"
+  },
+  {
+    "path": "forkfront/lib/res/drawable-hdpi/sym_keyboard_return.png",
+    "sha256": "cc49dfed4aff0a129c7f42b04f4cc966372f6683e3a0479055fe1d0f9b6a8f74",
+    "identical_reference_files": [
+      "ForkFront@1ce8a040:lib/res/drawable-hdpi/sym_keyboard_return.png"
+    ],
+    "license_status": "needs component/asset-specific review; hash equality is not a permission grant"
+  },
+  {
+    "path": "forkfront/lib/res/drawable-hdpi/sym_keyboard_shift.png",
+    "sha256": "aba0f74bc0ee20620c279dea6e8354c8e2f4e60847b2c6dce25b4f9874558c3a",
+    "identical_reference_files": [
+      "ForkFront@1ce8a040:lib/res/drawable-hdpi/sym_keyboard_shift.png"
+    ],
+    "license_status": "needs component/asset-specific review; hash equality is not a permission grant"
+  },
+  {
+    "path": "forkfront/lib/res/drawable-hdpi/sym_keyboard_delete.png",
+    "sha256": "909bd02b6c4529219204ea305d73236ef6803becfa6ee8df7b6fed50b8f69cf1",
+    "identical_reference_files": [
+      "ForkFront@1ce8a040:lib/res/drawable-hdpi/sym_keyboard_delete.png"
+    ],
+    "license_status": "needs component/asset-specific review; hash equality is not a permission grant"
+  },
+  {
+    "path": "forkfront/lib/res/drawable-hdpi/sym_keyboard_space.png",
+    "sha256": "25bca620c647d1e7fdbfbc111f77639a2100c4817e2055b4aab9668493529a8f",
+    "identical_reference_files": [
+      "ForkFront@1ce8a040:lib/res/drawable-hdpi/sym_keyboard_space.png"
+    ],
+    "license_status": "needs component/asset-specific review; hash equality is not a permission grant"
+  },
+  {
+    "path": "forkfront/lib/res/drawable-ldpi/sym_keyboard_shift.png",
+    "sha256": "8887e467f2762963c3935b312d56754f645b7df50d8a1df635145c863334d081",
+    "identical_reference_files": [
+      "ForkFront@1ce8a040:lib/res/drawable-ldpi/sym_keyboard_shift.png"
+    ],
+    "license_status": "needs component/asset-specific review; hash equality is not a permission grant"
+  },
+  {
+    "path": "forkfront/lib/res/drawable-ldpi/sym_keyboard_delete.png",
+    "sha256": "09eccf50531b0b7b707d26fe93d353a15ba0008f881bcbf115fd6cebc7f5cc28",
+    "identical_reference_files": [
+      "ForkFront@1ce8a040:lib/res/drawable-ldpi/sym_keyboard_delete.png"
+    ],
+    "license_status": "needs component/asset-specific review; hash equality is not a permission grant"
+  },
+  {
+    "path": "forkfront/lib/res/drawable-ldpi/sym_keyboard_space.png",
+    "sha256": "78f691e72942dae6426527f552bbbaf49447b356d8e8c689121a94a782c92fcf",
+    "identical_reference_files": [
+      "ForkFront@1ce8a040:lib/res/drawable-ldpi/sym_keyboard_space.png"
+    ],
+    "license_status": "needs component/asset-specific review; hash equality is not a permission grant"
+  },
+  {
+    "path": "forkfront/lib/res/drawable-mdpi/sym_keyboard_return.png",
+    "sha256": "a7f3b6f5f93f47f4aefca5729f0a134ee4f321a15e09db3cc97a67d2d1f25248",
+    "identical_reference_files": [
+      "ForkFront@1ce8a040:lib/res/drawable-mdpi/sym_keyboard_return.png"
+    ],
+    "license_status": "needs component/asset-specific review; hash equality is not a permission grant"
+  },
+  {
+    "path": "forkfront/gradle/wrapper/gradle-wrapper.jar",
+    "sha256": "497c8c2a7e5031f6aa847f88104aa80a93532ec32ee17bdb8d1d2f67a194a9c7",
+    "identical_reference_files": [
+      "JodiJodington/NetHack-Android@4aecc1f2:sys/android/gradle/wrapper/gradle-wrapper.jar",
+      "ForkFront@1ce8a040:gradle/wrapper/gradle-wrapper.jar"
+    ],
+    "license_status": "needs component/asset-specific review; hash equality is not a permission grant"
+  },
+  {
+    "path": "tilesets/unh16.bmp",
+    "sha256": "8fc78be143251f301d9ae7e36406caa6907156f19b48d782edf39bbcdfc61f30",
+    "identical_reference_files": [
+      "UnNetHack@439b8d63:tilesets/unh16.bmp"
+    ],
+    "license_status": "needs component/asset-specific review; hash equality is not a permission grant"
+  },
+  {
+    "path": "tilesets/untiles32x.png",
+    "sha256": "1187fb01f05eea1cc89ff0f0d0c0116c2921271761394bbf29f4fcf18efae61c",
+    "identical_reference_files": [
+      "gurrhack/UnNetHack-Android@d4fade97:tilesets/untiles32x.png",
+      "UnNetHack@439b8d63:tilesets/untiles32x.png"
+    ],
+    "license_status": "needs component/asset-specific review; hash equality is not a permission grant"
+  },
+  {
+    "path": "tilesets/unchozo32b.png",
+    "sha256": "abfae314ef3b7eff4fd7c293b5ef54e08f419dac912d7280457c69f7e019b07d",
+    "identical_reference_files": [
+      "UnNetHack@439b8d63:tilesets/unchozo32b.png"
+    ],
+    "license_status": "needs component/asset-specific review; hash equality is not a permission grant"
+  },
+  {
+    "path": "tilesets/unh32.bmp",
+    "sha256": "fb1b11dc12068197dfadc0e9753c8fcaea5ff814a5cd02f25eabe6e0f845983c",
+    "identical_reference_files": [
+      "UnNetHack@439b8d63:tilesets/unh32.bmp"
+    ],
+    "license_status": "needs component/asset-specific review; hash equality is not a permission grant"
+  }
+]

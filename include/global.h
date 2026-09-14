@@ -1,3 +1,4 @@
+/* Android port maintainers: modified for Android integration; publication notice added 2026-09-13. Earlier individual edit dates were not preserved in the uploaded snapshot. */
 /*  SCCS Id: @(#)global.h   3.4 2003/08/31  */
 /* Copyright (c) Stichting Mathematisch Centrum, Amsterdam, 1985. */
 /* NetHack may be freely redistributed.  See license for details. */
@@ -176,6 +177,9 @@ typedef glyph_t nhsym;
 
 #ifdef UNIX
 #include "unixconf.h"
+#endif
+#ifdef ANDROID
+#include "androidconf.h"
 #endif
 
 #ifdef OS2

@@ -1,0 +1,30 @@
+plugins {
+    id 'com.android.application'
+}
+android {
+    namespace = 'org.unnethack.android'
+    compileSdk = 36
+    buildToolsVersion = '36.0.0'
+    defaultConfig {
+        applicationId = 'org.unnethack.android'
+        minSdk = 23
+        targetSdk = 34
+        versionName = '6.0.15-dev'
+        versionCode = 6001501
+        ndk { abiFilters 'arm64-v8a' }
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    lint { disable 'ExpiredTargetSdkVersion' }
+}
+dependencies { implementation project(':forkfront') }

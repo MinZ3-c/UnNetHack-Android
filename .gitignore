@@ -91,3 +91,31 @@ tests/wishing/test_wishing
 
 # /win/
 /win/*/*.o
+
+# Android publication exclusions (2026-09-13)
+**/build/
+**/.gradle/
+**/local.properties
+/sys/android/app/libs/
+/sys/android/app/assets/unnethackdir/nhdat
+/device-backup*/
+**/save/
+*.recovered*
+*.sav
+*.save
+*.apk
+*.aab
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+*.pk8
+*.so
+*.class
+__pycache__/
+/sdk/
+/ndk/
+/work/
+/build-local/

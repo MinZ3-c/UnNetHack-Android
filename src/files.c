@@ -1,3 +1,4 @@
+/* Android port maintainers: modified for Android integration; publication notice added 2026-09-13. Earlier individual edit dates were not preserved in the uploaded snapshot. */
 /*  SCCS Id: @(#)files.c    3.4 2003/11/14  */
 /* Copyright (c) Stichting Mathematisch Centrum, Amsterdam, 1985. */
 /* NetHack may be freely redistributed.  See license for details. */
@@ -1998,7 +1999,9 @@ unlock_file_area(const char *filearea, const char *filename)
 /* ----------  BEGIN CONFIG FILE HANDLING ----------- */
 
 const char* configfile =
-#ifdef UNIX
+#ifdef ANDROID
+    "defaults.unh";
+#elif defined(UNIX)
     ".unnethackrc";
 #else
 # if defined(MAC) || defined(__BEOS__)

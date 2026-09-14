@@ -1,3 +1,4 @@
+/* Android port maintainers: modified for Android integration; publication notice added 2026-09-13. Earlier individual edit dates were not preserved in the uploaded snapshot. */
 /*  SCCS Id: @(#)restore.c  3.4 2003/09/06  */
 /* Copyright (c) Stichting Mathematisch Centrum, Amsterdam, 1985. */
 /* NetHack may be freely redistributed.  See license for details. */
@@ -890,11 +891,9 @@ dorecover(NHFILE *nhfp)
 #endif
     while (1) {
         if (nhfp->structlevel) {
-#ifdef ZEROCOMP
-            if (read(nhfp->fd, (genericptr_t) &ltmp, sizeof ltmp) < 0) {
-#else
+            /* sfstruct.c uses ordinary reads, including when ZEROCOMP is
+             * defined: EOF returns zero, not a negative sentinel. */
             if (read(nhfp->fd, (genericptr_t) &ltmp, sizeof ltmp) != sizeof ltmp) {
-#endif
                 break;
             }
         }

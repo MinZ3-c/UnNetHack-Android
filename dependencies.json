@@ -1,0 +1,43 @@
+{
+  "unnethack": {
+    "repository": "https://github.com/UnNetHack/UnNetHack",
+    "commit": "439b8d63d3d1ca78fb08588dd43f61874114b21a"
+  },
+  "android_shell": {
+    "repository": "https://github.com/JodiJodington/NetHack-Android",
+    "commit": "4aecc1f2b173b3e0e2629a575ed970bf12b90bc3"
+  },
+  "native_bridge_reference": {
+    "repository": "https://github.com/gurrhack/UnNetHack-Android",
+    "commit": "d4fade973a270371219a3d699e8d8f7454090c01"
+  },
+  "forkfront": {
+    "repository": "https://github.com/JodiJodington/ForkFront-Android",
+    "commit": "1ce8a040c932992fa125d2775160f2556d5601e6"
+  },
+  "lua": {
+    "version": "5.4.8",
+    "source": "https://www.lua.org/ftp/lua-5.4.8.tar.gz",
+    "sha256": "4f18ddae154e793e46eeab727c59ef1c0c0c2b744e7b94219710d76f530629ae"
+  },
+  "android_sdk": "platforms;android-36",
+  "build_tools": "36.0.0",
+  "ndk": "28.2.13676358",
+  "gradle": "9.5.1",
+  "android_gradle_plugin": "9.2.1",
+  "java": {
+    "version": "21.0.10",
+    "runtime": "JetBrains Runtime",
+    "build": "21.0.10+-14961533-b1163.108"
+  },
+  "reference_snapshot_not_used_as_base": {
+    "commit": "1a368e9143469a33b0db6432976ea048a4bfb588",
+    "note": "game/ in original upload; not the port base recorded in dependencies.json"
+  },
+  "native_build_host": {
+    "os": "Ubuntu 26.04 LTS (WSL2)",
+    "python_minimum": "3.12",
+    "ndk_archive": "https://dl.google.com/android/repository/android-ndk-r28c-linux.zip",
+    "ndk_archive_sha1": "a7b54a5de87fecd125a17d54f73c446199e72a64"
+  }
+}
