@@ -32,11 +32,15 @@ heart markers and classic `STATUSCOLOR` support.
 
 ## Download
 
-Get the [Android preview APK](https://github.com/MinZ3-c/UnNetHack-Android/releases/tag/android-v6.0.15-dev.3)
+Get the [Android preview APK](https://github.com/MinZ3-c/UnNetHack-Android/releases/tag/android-v6.0.15-dev.5)
 for ARM64 devices running Android 6.0 or newer. Read the release notes for the
 test status, debug-signing details and outstanding licensing questions.
 
 ## Current status
+
+Preview 5 restores optional utokick with confirmation, fixes branch wall
+tiles and end-of-game logs, and updates the default color settings. Existing
+options files are preserved; enable OPTIONS=autokick to use the new prompt.
 
 Preview 3 opens inventory selection automatically for item commands such as
 wear and drop. Android enables `force_invmenu` by default; `OPTIONS=!force_invmenu`

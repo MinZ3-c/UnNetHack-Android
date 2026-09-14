@@ -1549,7 +1549,7 @@ goto_level(d_level *newlevel, boolean at_stairs, boolean falling, boolean portal
     if (Is_moria_level(newlevel) || Is_moria_level(&u.uz)) {
         assign_moria_graphics(Is_moria_level(newlevel));
     }
-#ifdef USE_TILES
+#if defined(USE_TILES) || defined(ANDROID)
     substitute_tiles(newlevel);
 #endif
     /* record this level transition as a potential seen branch unless using

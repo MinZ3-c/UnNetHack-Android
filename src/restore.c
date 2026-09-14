@@ -935,7 +935,7 @@ dorecover(NHFILE *nhfp)
     if (Is_moria_level(&u.uz)) {
         assign_moria_graphics(TRUE);
     }
-#ifdef USE_TILES
+#if defined(USE_TILES) || defined(ANDROID)
     substitute_tiles(&u.uz);
 #endif
     restlevelstate();

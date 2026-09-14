@@ -1,5 +1,11 @@
 # Android publication preparation
 
+## 2026-09-14 — Android preview 5
+
+- Restore optional autokick with “Kick it open?” confirmation.
+- Fix branch wall tiles and missing end-of-game log files.
+- Restore upstream defaults with B/U/C and status colors; add commented autokick.
+
 ## 2026-09-14 — Android preview 3
 
 - Enable force_invmenu by default on Android and open the appropriate inventory

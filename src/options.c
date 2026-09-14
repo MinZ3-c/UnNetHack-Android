@@ -74,6 +74,7 @@ static struct Bool_Opt
     {"autodig", &flags.autodig, FALSE, SET_IN_GAME},
 #ifdef AUTO_OPEN
     {"autoopen", &iflags.autoopen, TRUE, SET_IN_GAME},
+    {"autokick", &iflags.autokick, FALSE, SET_IN_GAME},
 #endif /* AUTO_OPEN */
     {"autopickup", &flags.pickup, TRUE, SET_IN_GAME},
     {"autoquiver", &flags.autoquiver, FALSE, SET_IN_GAME},

@@ -87,6 +87,15 @@ int UnNetHackMain(int argc, char** argv)
 	/* fcntl locking needs the permanent lock target to exist. */
 	fp = fopen_datafile(HLOCK, "a", LOCKPREFIX);
 	if (fp) fclose(fp);
+	/* 2026-09-14: log targets must exist before fcntl locking at game end. */
+#ifdef LOGFILE
+	fp = fopen_datafile(LOGFILE, "a", SCOREPREFIX);
+	if (fp) fclose(fp);
+#endif
+#ifdef XLOGFILE
+	fp = fopen_datafile(XLOGFILE, "a", SCOREPREFIX);
+	if (fp) fclose(fp);
+#endif
 
 	choose_windows(DEFAULT_WINDOW_SYS);
 

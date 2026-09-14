@@ -796,6 +796,12 @@ doopen_indir(coordxy x, coordxy y)
                  (otmp = carrying(CREDIT_CARD)) ||
                  (otmp = carrying(LOCK_PICK)))) {
                 pick_lock(otmp, cc.x, cc.y, TRUE);
+#ifdef AUTO_OPEN
+            } else if (iflags.autokick) {
+                if (yn_function("Kick it open?", ynchars, 'n') == 'y') {
+                    res = dokick_at(cc.x, cc.y);
+                }
+#endif
             }
         }
         return res;

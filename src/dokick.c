@@ -880,8 +880,29 @@ kickstr(char *buf, const char *kickobjnam)
     return strcat(strcpy(buf, "kicking "), what);
 }
 
+static int kick_in_direction(boolean, coordxy, coordxy);
+
 int
 dokick(void)
+{
+    return kick_in_direction(FALSE, 0, 0);
+}
+
+/* Automatic door kicks reuse normal kicking without another direction prompt. */
+int
+dokick_at(coordxy x, coordxy y)
+{
+    if (!isok(x, y) || distmin(u.ux, u.uy, x, y) != 1
+        || !IS_DOOR(levl[x][y].typ) || !(levl[x][y].doormask & D_LOCKED)
+        || u.usteed || u.uswallow || u.uinwater || u.utrap
+        || Confusion || Stunned || Fumbling) {
+        return 0;
+    }
+    return kick_in_direction(TRUE, x, y);
+}
+
+static int
+kick_in_direction(boolean automatic, coordxy target_x, coordxy target_y)
 {
     coordxy x, y;
     int avrg_attrib;
@@ -955,7 +976,11 @@ dokick(void)
         return 0;
     }
 
-    if (!getdir((char *)0)) {
+    if (automatic) {
+        u.dx = target_x - u.ux;
+        u.dy = target_y - u.uy;
+        u.dz = 0;
+    } else if (!getdir((char *)0)) {
         return 0;
     }
     if (!u.dx && !u.dy) {

@@ -574,6 +574,7 @@ extern boolean cursed_object_at(coordxy, coordxy);
 extern boolean ghitm(struct monst *, struct obj *);
 extern void container_impact_dmg(struct obj *, coordxy, coordxy);
 extern int dokick(void);
+extern int dokick_at(coordxy, coordxy);
 extern boolean ship_object(struct obj *, coordxy, coordxy, boolean);
 extern void obj_delivery(boolean);
 extern void deliver_obj_to_mon(struct monst *mtmp, int, unsigned long);
@@ -2737,7 +2738,7 @@ extern void term_start_attr(int);
 extern void term_end_attr(int);
 
 /* ### tile.c ### */
-#ifdef USE_TILES
+#if defined(USE_TILES) || defined(ANDROID)
 extern void substitute_tiles(d_level *);
 #endif
 
