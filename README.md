@@ -1,3 +1,26 @@
+General information about UnNetHack
+===================================
+
+UnNetHack is a fork of NetHack, originally based on NetHack version 3.4.3.
+
+It features more randomness, more levels, more challenges and more fun than
+vanilla NetHack.
+
+In a nutshell I would describe UnNetHack as "how NetHack would look today if
+the DevTeam didn't stop releasing", following a modern open source project
+approach of development.
+
+
+The project page with detailed information about changes from NetHack, the
+development blog, public servers, source code repository and ways to reach the
+developer can be found at: https://unnethack.wordpress.com/
+
+For discussions, join the IRC channel #unnethack on Libera.Chat, post to the
+Reddit group r/nethack or the Usenet group rec.games.roguelike.nethack.
+
+
+ -- Good luck, and happy Hacking
+ 
 # UnNetHack 6 for Android
 
 An unofficial, experimental ARM64 Android port of UnNetHack 6.0.15-dev,
