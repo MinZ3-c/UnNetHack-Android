@@ -1,5 +1,17 @@
 # Android publication preparation
 
+## 2026-09-14 — Android preview 2
+
+- Generate host data and Android tables with the same MAIL setting, fixing
+  gold named "white gems" and shifted object/monster identifiers.
+- Check generated counts, gold identity and every host/Android table entry
+  before native compilation; add an Android library naming regression test.
+- Preserve incompatible saves and stop loading instead of deleting them.
+  Earlier Android saves require the older build; use a new character name.
+- Normalize Windows-checkout text in native build copies and serialize the
+  legacy host build to avoid shared-generator races.
+- Increment Android versionCode to 6001502 and data revision to 411.
+
 ## 2026-09-13
 
 - Preserved pinned UnNetHack history and root layout; imported working Android

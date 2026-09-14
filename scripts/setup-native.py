@@ -58,18 +58,34 @@ def ignore(directory, names):
 
 # Build copies also include all maintained Android code; the host configuration
 # does not define ANDROID. All generated files stay outside the source export.
+def copy_native_file(src, dst):
+    result = shutil.copy2(src, dst)
+    # Native scripts, configure inputs and roff sources need Unix line endings.
+    data = Path(dst).read_bytes()
+    if b'\0' not in data and b'\r\n' in data:
+        try:
+            data.decode('utf-8')
+        except UnicodeDecodeError:
+            pass
+        else:
+            Path(dst).write_bytes(data.replace(b'\r\n', b'\n'))
+    return result
+
 for name in ['host', 'target']:
-    shutil.copytree(repo, build / name, ignore=ignore)
+    shutil.copytree(repo, build / name, ignore=ignore, copy_function=copy_native_file)
 with tarfile.open(archive) as tar:
     tar.extractall(build, filter='data')
 common = ['sh', 'configure', '--enable-dummy-graphics', '--disable-tty-graphics',
           '--disable-file-areas', '--with-compression=no', '--disable-status-hilites',
           '--with-owner=' + str(os.getuid()), '--with-group=' + str(os.getgid())]
 host = build / 'host'
-run(common + ['CFLAGS=-O2 -std=gnu11'], host)
+run(common + ['CFLAGS=-O2 -std=gnu11 -DANDROID_HOST_TOOLS',
+              'CPPFLAGS=-DANDROID_HOST_TOOLS'], host)
 run(['make', 'include/autoconf_paths.h'], host)
 run(['make', '-C', 'util', 'makedefs', '../include/pm.h', '../include/onames.h'], host)
-run(['make', '-j' + str(args.jobs), 'all'], host)
+run(['make', '-C', 'src', '../include/date.h'], host)
+# The legacy top-level targets can race while rebuilding shared generators.
+run(['make', '-j1', 'all'], host)
 lua = build / 'lua-5.4.8/src'
 run(['make', '-j' + str(args.jobs), 'a', 'CC=' + str(cc),
      'AR=' + str(toolchain / 'llvm-ar') + ' rcu',

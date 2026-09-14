@@ -41,3 +41,18 @@ comparison against newly compiled classes, new device tests, binary determinism.
 Not performed on this rebuilt APK: device gameplay/save compatibility tests,
 byte-identical repeated builds, complete dependency-license clearance.
 The installed working app and device data were not changed in this review.
+# Android preview 2 follow-up (2026-09-14)
+
+- The table regression check fails against preview 1: generated object and
+  monster counts disagree with the Android-compiled tables.
+- After aligning MAIL, generated counts and every host/Android table entry
+  match, and GOLD_PIECE resolves to gold piece. All 134 native files link.
+- The save-entry-point test passes: valid saves proceed; incompatible saves
+  close and stop loading without deleting the save or starting a replacement.
+- Android debug assembly succeeds (versionCode 6001502, data revision 411).
+- Earlier saves are incompatible; start with a new character name. No device
+  installation or full-game test of this build has been performed.
+- On the Samsung S22 Ultra, the standalone test loaded the actual corrected
+  Android library and verified xname output for one and 23 coins: "gold piece"
+  and "gold pieces". The probe initializes the player monster needed by the
+  naming code's blindness check. No app install or saved-game access occurred.

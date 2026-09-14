@@ -1,5 +1,19 @@
 # Android build
 
+The Android host generators use `ANDROID_HOST_TOOLS` so their MAIL setting
+matches the Android runtime. The native build checks generated object/monster
+counts and compares all table entries with `scripts/check-android-tables.py`.
+Do not copy headers or nhdat from a generic Linux build. Native build copies
+normalize UTF-8 text line endings from Windows checkouts; the legacy host make
+runs serially because its shared generators can race under parallel make.
+
+Regression tests: `tests/android/test-save-preservation.py` runs on Linux/WSL
+with gcc without touching real saves. `tests/android/gold-name.c` can be built
+with the NDK, AUTOCONF and ANDROID defines, and the target include and Lua
+include directories; link with `-ldl` and run on Android with the built
+`libunnethack.so` path. It checks the actual library's singular/plural gold
+names without starting a game or opening save files.
+
 The reorganized source was built from scratch on 2026-09-14: host utilities,
 nhdat, ARM64 Lua, the native library and a debug APK. Build outputs remain
 outside this source tree. Download caches and the already installed NDK/SDK

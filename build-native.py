@@ -12,6 +12,8 @@ import sys
 
 build = Path(sys.argv[1]).resolve()
 source = build / 'target'
+subprocess.run([sys.executable, str(Path(__file__).resolve().parent /
+                'scripts/check-android-tables.py'), str(build)], check=True)
 tools = build / 'android-ndk-r28c/toolchains/llvm/prebuilt/linux-x86_64/bin'
 lua = build / 'lua-5.4.8/src'
 objects = build / 'objects-arm64'

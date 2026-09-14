@@ -1330,7 +1330,15 @@ restore_saved_game(void)
         if (validate(nhfp, fq_save, FALSE) != 0) {
             close_nhfile(nhfp);
             nhfp = (NHFILE *) 0;
+#ifdef ANDROID
+            /* 2026-09-14: preserve saves from builds with incompatible tables. */
+            raw_print("This save is incompatible with this Android build.");
+            raw_print("It has been preserved. Start with a new character name.");
+            wait_synch();
+            nethack_exit(EXIT_FAILURE);
+#else
             (void) delete_savefile();
+#endif
         }
     }
     return nhfp;

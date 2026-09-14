@@ -9,6 +9,7 @@
 #define ANDROIDCONF_H
 
 #define error debuglog
+extern void nethack_exit(int);
 
 #define NO_FILE_LINKS /* if no hard links */
 #define LOCKDIR "." /* where to put locks */ 
@@ -38,8 +39,7 @@
 #undef SVR4
 #undef NETWORK
 #define LINUX
-#undef MAIL
-#undef DEF_MAILREADER
+/* MAIL is disabled for both Android and its host generators in global.h. */
 
 #define PARANOID
 

@@ -182,6 +182,12 @@ typedef glyph_t nhsym;
 #include "androidconf.h"
 #endif
 
+/* Android port, 2026-09-14: generators and runtime must share table features. */
+#if defined(ANDROID) || defined(ANDROID_HOST_TOOLS)
+#undef MAIL
+#undef DEF_MAILREADER
+#endif
+
 #ifdef OS2
 #include "os2conf.h"
 #endif

@@ -9,11 +9,16 @@ heart markers and classic `STATUSCOLOR` support.
 
 ## Download
 
-Get the [Android preview APK](https://github.com/MinZ3-c/UnNetHack-Android/releases/tag/android-v6.0.15-dev.1)
+Get the [Android preview APK](https://github.com/MinZ3-c/UnNetHack-Android/releases/tag/android-v6.0.15-dev.2)
 for ARM64 devices running Android 6.0 or newer. Read the release notes for the
 test status, debug-signing details and outstanding licensing questions.
 
 ## Current status
+
+Preview 2 fixes mismatched generated object and monster IDs (including gold
+being named "white gems"). Start with a new character name: saves from the
+earlier builds are incompatible. Incompatible saves are preserved rather than
+deleted when loading fails.
 
 The original working build was tested on a Samsung S22 Ultra, including
 save/load, pet markers and status colors. The reorganized source completed a
