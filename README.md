@@ -7,6 +7,12 @@ The port combines the current UnNetHack engine with the NetHack Android shell
 and ForkFront interface. It includes Android save/recovery integration, pet
 heart markers and classic `STATUSCOLOR` support.
 
+## Download
+
+Get the [Android preview APK](https://github.com/MinZ3-c/UnNetHack-Android/releases/tag/android-v6.0.15-dev.1)
+for ARM64 devices running Android 6.0 or newer. Read the release notes for the
+test status, debug-signing details and outstanding licensing questions.
+
 ## Current status
 
 The original working build was tested on a Samsung S22 Ultra, including
